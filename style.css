@@ -24,12 +24,14 @@
 	}
 	.btn-add {
 		background: #99F6E4;
+		box-shadow: 0px 6px 24px rgba(153, 246, 228, 0.5);
 	}
 	.btn-add:active{
 		background-color: #5EEAD4;
 	}
 	.btn-rem {
 		background-color: #FCA5A5;
+		box-shadow: 0px 6px 24px rgba(252, 165, 165, 0.5);
 	}
 	.btn-rem:active{
 		background-color: #F87171;
@@ -85,7 +87,8 @@ header {
 	position: relative;
 	height: 150px;
 	width: 100%;
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05);
+	border-radius: 0px 0px 20px 20px;
 }
 
 .container-title {
@@ -110,7 +113,7 @@ header {
 	margin-top: 20px;
 	left: 50%;
 	border-radius: 20px;
-	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 6px 60px rgba(0, 0, 0, 0.05);
 }
 
 table {
@@ -134,6 +137,7 @@ td {
 .space-bottom {
 	height: 120px;
 	width: 100%;
+	position: relative;
 }
 
 /* .section-container-buttons {
@@ -149,7 +153,8 @@ td {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
-	box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px -6px 24px rgba(0, 0, 0, 0.05);
+	border-radius: 20px 20px 0px 0px;
 }
 
 .container-input,
@@ -194,7 +199,7 @@ input,
 	font-size: 11px;
 	text-align: center;
 	border: none;
-	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+	
 	transition: 100ms;
 }
 
