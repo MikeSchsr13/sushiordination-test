@@ -11,16 +11,20 @@
 	.container-buttons, .container-table {
 		background-color: #FAFAFA;
 	}
-	input {
-		border: solid 1px #9CA3AF;
-	}
 	tr {
+		border: solid 1px #E4E4E7;
 		border-top: none;
 		border-left: none;
 		border-right: none;
 	}
+	tr:last-child{
+		border: none;
+	}
+	input{
+		border: solid 1px #D4D4D8;
+	}
 	input:focus {
-		border: solid 1px #D1D5DB;
+		border: solid 1px #E4E4E7;
 	}
 	.btn-add {
 		background: #99F6E4;
@@ -44,14 +48,18 @@
 	body{
 		background-color: #000;
 	}
-	.container-buttons, .container-table, input {
+	.container-buttons, .container-table, input{
 		background-color: #000;
 		border: solid 1px #3F3F46;
 	}
 	tr {
+		border: solid 1px #3F3F46;
 		border-top: none;
 		border-left: none;
 		border-right: none;
+	}
+	tr:last-child{
+		border: none;
 	}
 	input:focus{
 		border: solid 1px #52525B;
