@@ -42,10 +42,10 @@
 		color: #fafafa;
 	}
 	body{
-		background-color: #18181B;
+		background-color: #000;
 	}
 	header,.container-buttons, .container-table {
-		background-color: #27272A;
+		background-color: #18181B;
 	}
 	input {
 		border: solid 1px #4b5563;
