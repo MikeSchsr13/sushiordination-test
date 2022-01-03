@@ -39,16 +39,14 @@
 }
 @media (prefers-color-scheme: dark) {
 	* {
-		color: #fafafa;
+		color: #D4D4D8;
 	}
 	body{
 		background-color: #000;
 	}
-	header,.container-buttons, .container-table {
-		background-color: #18181B;
-	}
-	input {
-		border: solid 1px #4b5563;
+	header,.container-buttons, .container-table, input {
+		background-color: #000;
+		border: solid 1px #3F3F46;
 	}
 	tr {
 		border-top: none;
@@ -56,7 +54,7 @@
 		border-right: none;
 	}
 	input:focus{
-		border: solid 1px #6b7280;
+		border: solid 1px #52525B;
 	}
 	.btn-add {
 		background: #0F766E;
@@ -94,6 +92,7 @@ header {
 	box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05);
 	border-radius: 0px 0px 20px 20px;
 	z-index: 1;
+	border-top: none;
 }
 
 .container-title {
@@ -160,6 +159,7 @@ td {
 	bottom: 0;
 	box-shadow: 0px -6px 24px rgba(0, 0, 0, 0.05);
 	border-radius: 20px 20px 0px 0px;
+	border-bottom: none;
 }
 
 .container-input,
