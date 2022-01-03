@@ -3,22 +3,13 @@
 /* DARK MODE - LIGHT MODE */
 @media (prefers-color-scheme: light) {
 	* {
-		color: #18181b;
+		color: #171717;
 	}
 	body{
 		background-color: #F4F4F5;
 	}
 	.container-buttons, .container-table {
 		background-color: #FAFAFA;
-	}
-	tr {
-		border: solid 1px #E4E4E7;
-		border-top: none;
-		border-left: none;
-		border-right: none;
-	}
-	tr:last-child{
-		border: none;
 	}
 	input{
 		border: solid 1px #D4D4D8;
@@ -51,15 +42,6 @@
 	.container-buttons, .container-table, input{
 		background-color: #000;
 		border: solid 1px #3F3F46;
-	}
-	tr {
-		border: solid 1px #3F3F46;
-		border-top: none;
-		border-left: none;
-		border-right: none;
-	}
-	tr:last-child{
-		border: none;
 	}
 	input:focus{
 		border: solid 1px #52525B;
@@ -208,7 +190,6 @@ input,
 	font-size: 11px;
 	text-align: center;
 	border: none;
-	
 	transition: 100ms;
 }
 
