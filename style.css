@@ -6,10 +6,10 @@
 		color: #18181b;
 	}
 	body{
-		background-color: #F1F5F9;
+		background-color: #F4F4F5;
 	}
 	header,.container-buttons, .container-table {
-		background-color: #F8FAFC;
+		background-color: #FAFAFA;
 	}
 	input {
 		border: solid 1px #9CA3AF;
@@ -41,11 +41,12 @@
 	* {
 		color: #fafafa;
 	}
-	body, .container-buttons {
-		background-color: #18181b;
+	body{
+		background-color: #18181B;
 	}
-	tr,
-	.container-buttons,
+	header,.container-buttons, .container-table {
+		background-color: #27272A;
+	}
 	input {
 		border: solid 1px #4b5563;
 	}
@@ -59,9 +60,11 @@
 	}
 	.btn-add {
 		background: #0F766E;
+		box-shadow: 0px 6px 24px rgba(15, 118, 110, 0.5);
 	}
 	.btn-rem {
 		background-color: #B91C1C;
+		box-shadow: 0px 6px 24px rgba(185, 28, 28, 0.5);
 	}
 	.btn-add:active {
 		background: #115e59;
@@ -84,11 +87,13 @@ main {
 }
 
 header {
-	position: relative;
-	height: 150px;
+	position: fixed;
+	top: 0;
+	height: 100px;
 	width: 100%;
 	box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05);
 	border-radius: 0px 0px 20px 20px;
+	z-index: 1;
 }
 
 .container-title {
@@ -100,7 +105,7 @@ header {
 }
 
 .title {
-	font-size: 35px;
+	font-size: 30px;
 	letter-spacing: 10px;
 	font-weight: lighter;
 	text-align: center;
@@ -110,7 +115,7 @@ header {
 	position: relative;
 	transform: translate(-50%);
 	width: 80%;
-	margin-top: 20px;
+	margin-top: 130px;
 	left: 50%;
 	border-radius: 20px;
 	box-shadow: 0px 6px 60px rgba(0, 0, 0, 0.05);
