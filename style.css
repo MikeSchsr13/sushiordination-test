@@ -5,53 +5,61 @@
 	* {
 		color: #171717;
 	}
-	body{
-		background-color: #F4F4F5;
+	body {
+		background-color: #f4f4f5;
 	}
-	.container-buttons, .container-table {
-		background-color: #FAFAFA;
+	.container-buttons,
+	.container-table {
+		background-color: #fafafa;
 	}
-	input{
-		border: solid 1px #D4D4D8;
+	input {
+		border: solid 1px #d4d4d8;
 	}
 	input:focus {
-		border: solid 1px #E4E4E7;
+		border: solid 1px #e4e4e7;
 	}
 	.btn-add {
-		background: #99F6E4;
+		background: #99f6e4;
 		box-shadow: 0px 6px 24px rgba(153, 246, 228, 0.5);
 	}
-	.btn-add:active{
-		background-color: #5EEAD4;
+	.btn-add:active {
+		background-color: #5eead4;
 	}
 	.btn-rem {
-		background-color: #FCA5A5;
+		background-color: #fca5a5;
 		box-shadow: 0px 6px 24px rgba(252, 165, 165, 0.5);
 	}
-	.btn-rem:active{
-		background-color: #F87171;
+	.btn-rem:active {
+		background-color: #f87171;
+	}
+	.check {
+		border: solid 1px #fca5a5 !important;
 	}
 }
 @media (prefers-color-scheme: dark) {
 	* {
-		color: #D4D4D8;
+		color: #d4d4d8;
 	}
-	body{
+	body {
 		background-color: #000;
 	}
-	.container-buttons, .container-table, input{
+	.container-buttons,
+	.container-table {
 		background-color: #000;
-		border: solid 1px #3F3F46;
+		border: solid 1px #3f3f46;
 	}
-	input:focus{
-		border: solid 1px #52525B;
+	input {
+		border: solid 1px #3f3f46;
+	}
+	input:focus {
+		border: solid 1px #52525b;
 	}
 	.btn-add {
-		background: #0F766E;
+		background: #0f766e;
 		box-shadow: 0px 6px 24px rgba(15, 118, 110, 0.5);
 	}
 	.btn-rem {
-		background-color: #B91C1C;
+		background-color: #b91c1c;
 		box-shadow: 0px 6px 24px rgba(185, 28, 28, 0.5);
 	}
 	.btn-add:active {
@@ -59,6 +67,9 @@
 	}
 	.btn-rem:active {
 		background-color: #991b1b;
+	}
+	.check {
+		border: solid 1px #b91c1c !important;
 	}
 }
 
@@ -142,7 +153,7 @@ td {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
-	box-shadow: 0px -6px 24px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
 	border-bottom: none;
 	border-left: none;
 	border-right: none;
@@ -157,7 +168,7 @@ td {
 	width: calc(100% / 2);
 }
 
-.container-btn-rem{
+.container-btn-rem {
 	width: calc(100% / 3);
 }
 
@@ -204,7 +215,32 @@ input,
 	opacity: 1;
 }
 
-.hide{
-	opacity: 0; 
+.hide {
+	opacity: 0;
 	transform: scale(0.9);
+}
+
+.check {
+	animation: shake 0.2s;
+
+	/* ripetizione */
+	animation-iteration-count: 2;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	30% {
+		transform: translate(-55%, -50%);
+	}
+	50% {
+		transform: translate(-50%, -50%);
+	}
+	80% {
+		transform: translate(-45%, -50%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
 }
