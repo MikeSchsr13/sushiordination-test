@@ -8,6 +8,7 @@ window.onload = function() {
 // controlla che input abbia strettamente un numero al suo interno
 function checkText() {
 	var input = document.getElementById('text');
+
 	if (input.value == '' || input.value <= 0) {
 		input.classList.add('check');
 		input.focus();
@@ -21,16 +22,22 @@ function checkText() {
 // SE il numero non è già nella tabella aggiunge una nuova riga
 // ALTRIMENTI incrementa la quantità
 function aggiungi() {
+	var table = document.getElementById('table');
+	var input = document.getElementById('text');
+	var container_input = document.getElementById('container-input');
+	var container_btn_rem = document.getElementById('container-btn-rem');
+	var container_btn_add = document.getElementById('container-btn-add');
+
 	if (checkText()) {
-		var table = document.getElementById('table');
-		var input = document.getElementById('text');
 		input.classList.remove('check');
 		var check = false;
+		var cellNum;
+		var cellQua;
 
 		// controlla che il numero sia nella tabella per incrementarlo altrimenti esce e lo aggiunge alla tabella
 		for (var j = 1; j < table.rows.length; j++) {
-			var cellNum = table.rows[j].cells[0]; // preleva il numero dalla tabella
-			var cellQua = table.rows[j].cells[1]; // preleva la quantità dalla tabella
+			cellNum = table.rows[j].cells[0]; // preleva il numero dalla tabella
+			cellQua = table.rows[j].cells[1]; // preleva la quantità dalla tabella
 
 			if (cellNum.innerHTML == input.value) {
 				++cellQua.innerHTML;
@@ -44,8 +51,8 @@ function aggiungi() {
 		if (!check) {
 			var i = table.rows.length; // preleva il numero di righe della tabella
 			var row = table.insertRow(i);
-			var cellNum = (row.insertCell(0).innerHTML = input.value);
-			var cellQuantity = (row.insertCell(1).innerHTML = 1);
+			cellNum = row.insertCell(0).innerHTML = input.value;
+			cellQua = row.insertCell(1).innerHTML = 1;
 
 			input.focus();
 			input.value = '';
@@ -54,12 +61,12 @@ function aggiungi() {
 			if (i == 1) {
 				//mostro la tabella e il bottone rimuovi se esiste almeno una riga + gestione animazione con timer
 				setTimeout(() => {
-					document.getElementById('container-btn-rem').classList.add('show'); // mostra btn-rem
-					document.getElementById('container-btn-rem').classList.remove('hide');
+					container_btn_rem.classList.add('show'); // mostra btn-rem
+					container_btn_rem.classList.remove('hide');
 				}, 300);
 				// animazione bottoni
-				document.getElementById('container-btn-add').style.width = 'calc(100%/3)';
-				document.getElementById('container-input').style.width = 'calc(100%/3)';
+				container_btn_add.style.width = 'calc(100%/3)';
+				container_input.style.width = 'calc(100%/3)';
 			}
 		}
 	}
@@ -68,16 +75,22 @@ function aggiungi() {
 // SE il numero è nella tabella decrementa la quantità di 1
 // SE la quantità = 0 nasconde la tabella e il tasto rimuovi
 function elimina() {
+	var table = document.getElementById('table');
+	var input = document.getElementById('text');
+	var container_input = document.getElementById('container-input');
+	var container_btn_rem = document.getElementById('container-btn-rem');
+	var container_btn_add = document.getElementById('container-btn-add');
+
 	if (checkText()) {
-		var table = document.getElementById('table');
-		var input = document.getElementById('text');
 		input.classList.remove('check');
 		var check = false;
+		var cellNum;
+		var cellQua;
 
 		// cerca se il numero è presente nella tabella
 		for (var j = 1; j < table.rows.length; j++) {
-			var cellNum = table.rows[j].cells[0];
-			var cellQua = table.rows[j].cells[1];
+			cellNum = table.rows[j].cells[0];
+			cellQua = table.rows[j].cells[1];
 
 			// se è presente decrementa la quantità
 			if (cellNum.innerHTML == input.value) {
@@ -102,11 +115,11 @@ function elimina() {
 		var i = table.rows.length;
 		if (i == 1) {
 			// nascondo la tabella e il bottone rimuovi se non esiste nessun elemento nella tabella
-			document.getElementById('container-btn-rem').classList.remove('show');
-			document.getElementById('container-btn-rem').classList.add('hide');
+			container_btn_rem.classList.remove('show');
+			container_btn_rem.classList.add('hide');
 			setTimeout(() => {
-				document.getElementById('container-btn-add').style.width = 'calc(100%/2)';
-				document.getElementById('container-input').style.width = 'calc(100%/2)';
+				container_btn_add.style.width = 'calc(100%/2)';
+				container_input.style.width = 'calc(100%/2)';
 			}, 300);
 		}
 	}
